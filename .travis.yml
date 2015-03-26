@@ -1,0 +1,26 @@
+%YAML 1.1
+---
+language: python
+python:
+  - 2.6
+  - 2.7
+  - pypy
+  - 3.2
+  - 3.3
+  - 3.4
+install:
+  - if [[ $TRAVIS_PYTHON_VERSION == '2.6' ]]; then pip install unittest2; fi
+  - pip install -e .
+  - pip install -r test-requirements.txt
+script: nosetests
+after_success:
+  - coveralls
+deploy:
+  provider: pypi
+  user: sprockets
+  on:
+    python: 2.7
+    tags: true
+    all_branches: true
+  password:
+    secure: JRmF7wfSuD3Aes2exf7x5mu9tqgkn5gmj1THacfcqqWntWW9odhVcdDfDzLltVsTpA8AKWkcSVBpUczZHWzq4J2lGfrkC5vzi9CHxepxWAduZ7YjmOi9UXxY5A0xjviZGObJjzpnnkeQD/M9dF0KcD/mm6ks94BLoeQeuHlUnPg=
