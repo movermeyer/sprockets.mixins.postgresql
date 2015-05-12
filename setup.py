@@ -29,7 +29,7 @@ if sys.version_info < (3, 0):
 
 setuptools.setup(
     name='sprockets.mixins.postgresql',
-    version='0.0.0',
+    version='1.0.0',
     description='A sprockets mixin that automatically connects to PostgreSQL',
     long_description=codecs.open('README.rst', encoding='utf-8').read(),
     url='https://github.com/sprockets/sprockets.mixins.postgresql.git',
