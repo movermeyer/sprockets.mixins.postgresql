@@ -66,7 +66,7 @@ asynchronous Tornado ``RequestHandler`` for a database named ``foo``:
     os.environ['FOO_DBNAME'] = 'foo'
     os.environ['FOO_PASSWORD'] = 'bar'
 
-    class FooRequestHandler(postgresql.HandlerMixin,
+    class FooRequestHandler(postgresql.AsyncHandlerMixin,
                             web.RequestHandler):
 
         DBNAME = 'foo'
