@@ -27,11 +27,7 @@ class HandlerMixinTest(unittest.TestCase):
     def setUp(self, mock_init):
         self.mock_init = mock_init
 
-        os.environ['BAR_HOST'] = 'db1'
-        os.environ['BAR_PORT'] = '5433'
-        os.environ['BAR_DBNAME'] = 'bar'
-        os.environ['BAR_USER'] = 'foo'
-        os.environ['BAR_PASSWORD'] = 'baz'
+        os.environ['PGSQL_BAR'] = 'postgres://foo:baz@db1:5433/bar'
         self.mixin = MixinRequestHandler()
         self.mixin.initialize()
 
@@ -46,11 +42,7 @@ class AsyncHandlerMixinTest(unittest.TestCase):
     def setUp(self, mock_init):
         self.mock_init = mock_init
 
-        os.environ['BAZ_HOST'] = 'db2'
-        os.environ['BAZ_PORT'] = '5434'
-        os.environ['BAZ_DBNAME'] = 'baz'
-        os.environ['BAZ_USER'] = 'qux'
-        os.environ['BAZ_PASSWORD'] = 'corgie'
+        os.environ['PGSQL_BAZ'] = 'postgres://qux:corgie@db2:5434/baz'
         self.mixin = AsyncMixinRequestHandler()
         self.mixin.initialize()
 
