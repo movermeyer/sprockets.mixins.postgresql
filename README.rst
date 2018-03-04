@@ -90,8 +90,8 @@ Available at https://sprocketsmixinspostgresql.readthedocs.org/en/latest/history
 .. |Coverage| image:: https://img.shields.io/coveralls/sprockets/sprockets.mixins.postgresql.svg?
    :target: https://coveralls.io/r/sprockets/sprockets.mixins.postgresql
 
-.. |Downloads| image:: https://pypip.in/d/sprockets.mixins.postgresql/badge.svg?
+.. |Downloads| image:: https://img.shields.io/pypi/dm/sprockets.mixins.postgresql.svg
    :target: https://pypi.python.org/pypi/sprockets.mixins.postgresql
 
-.. |License| image:: https://pypip.in/license/sprockets.mixins.postgresql/badge.svg?
+.. |License| image:: https://img.shields.io/pypi/l/sprockets.mixins.postgresql.svg
    :target: https://sprocketsmixinspostgresql.readthedocs.org
